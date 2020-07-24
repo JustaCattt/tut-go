@@ -1,0 +1,111 @@
+<cu-custom bgColor="bg-gradual-blue">
+    <!-- <view slot="backText">返回</view> -->
+    <view slot="content">饰品市场</view>
+</cu-custom>
+
+
+        <!--<view class="container">-->
+        <!--	&lt;!&ndash; <view class="category-box"> &ndash;&gt;-->
+        <!--		<view class="left-box">-->
+        <!--				<text wx:for="{{categories}}" wx:key="index" class="menu-item {{currentMenuIndex===index? 'selected':''}}" data-id="{{item.id}}" data-index="{{index}}" data-title-name="{{item.name}}" bindtap="changeCategory">-->
+        <!--					{{item.name}}-->
+        <!--				</text>-->
+        <!--		</view>-->
+        <!--		<view class="right-box">-->
+        <!--			&lt;!&ndash; <image src="/images/goods/9.png"></image> &ndash;&gt;-->
+        <!--		</view>-->
+        <!--	&lt;!&ndash; </view> &ndash;&gt;-->
+        <!--</view>-->
+<view class="VerticalBox">
+    <scroll-view class="VerticalNav nav" scroll-y scroll-with-animation scroll-top="{{VerticalNavTop}}"
+                 style="height:calc(100vh - 375rpx)">
+        <view class="cu-item {{index===TabCur?'text-green cur':''}}" wx:for="{{list}}" wx:key bindtap='tabSelect'
+              data-id="{{index}}">
+            {{item.name}}
+        </view>
+    </scroll-view>
+    <scroll-view class="VerticalMain" scroll-y scroll-with-animation style="height:calc(100vh - 375rpx)"
+                 scroll-into-view="main-{{MainCur}}" bindscroll="VerticalMain">
+        <view class="padding-top padding-lr" wx:for="{{list}}" wx:key id="main-{{index}}">
+            <view class='cu-bar solid-bottom bg-white'>
+                <view class='action'>
+                    <text class='cuIcon-title text-green'></text>
+                    {{item.name}}
+                </view>
+            </view>
+            <view class="cu-list menu-avatar" bindtap="toPurchase">
+                <view class="cu-item">
+                    <view class="cu-avatar radius lg"
+                          style="background-image:url('/images/goods/匕首/1.png');">
+                        <view class="cu-tag badge">hot</view>
+                    </view>
+                    <view class="content">
+                        <view class="text-red">锯齿爪刀|多普勒</view>
+                        <view class="text-gray text-sm flex">
+                        </view>
+                    </view>
+                    <view class="action">
+                        <!--                        <view class="text-grey text-xs">22:20</view>-->
+                        <view class="cu-tag round bg-orange sm">-20%</view>
+                        <view class="cu-tag round bg-green sm">20人已购</view>
+                    </view>
+                </view>
+                <view class="cu-item">
+                    <view class="cu-avatar radius lg"
+                          style="background-image:url('/images/goods/手枪/1.png');">
+                    </view>
+                    <view class="content">
+                        <view class="text-orange">
+                            <text class="text-cut">沙漠之鹰|大佬龙</text>
+                        </view>
+                    </view>
+                    <view class="action">
+                        <view class="cu-tag round bg-orange sm">-10%</view>
+                        <view class="cu-tag round bg-green sm">4人已购</view>
+                    </view>
+                </view>
+                <view class="cu-item ">
+                    <view class="cu-avatar radius lg"
+                          style="background-image:url('/images/goods/步枪/1.png');"></view>
+                    <view class="content">
+                        <view class="text-yellow">
+                            <text class="text-cut">M4A4|黑色魅影</text>
+                        </view>
+                    </view>
+                    <view class="action">
+                        <view class="cu-tag round bg-orange sm">-9%</view>
+                        <view class="cu-tag round bg-green sm">2人已购</view>
+                    </view>
+                </view>
+                <view class="cu-item ">
+                    <view class="cu-avatar radius lg"
+                          style="background-image:url('/images/goods/冲锋枪/1.png');"></view>
+                    <view class="content">
+                        <view class="text-grey">
+                            <text class="text-cut">MAC-10|霓虹骑士</text>
+                        </view>
+                    </view>
+                    <view class="action">
+                        <view class="cu-tag round bg-grey sm">-5%</view>
+                        <view class="cu-tag round bg-grey sm">0人已购</view>
+                    </view>
+                </view>
+                <view class="cu-item">
+                    <view class="cu-avatar radius lg"
+                          style="background-image:url('/images/goods/霰弹枪/1.png');">
+                    </view>
+                    <view class="content">
+                        <view class="text-grey">
+                            <text class="text-cut">截短|启示录</text>
+                        </view>
+                    </view>
+                    <view class="action">
+                        <view class="cu-tag round bg-grey sm">-2%</view>
+                        <view class="cu-tag round bg-grey sm">0人已购</view>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+    </scroll-view>
+</view>

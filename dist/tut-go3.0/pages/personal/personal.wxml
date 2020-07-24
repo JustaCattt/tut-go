@@ -1,0 +1,58 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<!-- <view slot="backText">返回</view> -->
+	<view slot="content">个人资料</view>
+</cu-custom>
+
+<view class="userinfo">
+		<button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">点击获取头像</button>
+			<image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+
+<view class="cu-list menu shadow-lg margin-top-xl">
+      <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-black">昵称</text>
+          <text class="item text-grey"> {{userInfo.nickName}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- <view class="cu-list menu shadow-lg margin-top-xl">
+      <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-black">性别</text>
+          <text class="text-grey" id="userName"> {{userSex}}</text>
+        </view>
+      </view>
+    </view> -->
+
+    	<view class="cu-form-group">
+		<view class="title">性别</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker text-grey">
+				{{index?picker[index]:picker[index]}}
+			</view>
+		</picker>
+	</view>
+
+    <view class="cu-list menu shadow-lg">
+      <view class="cu-item arrow">
+        <view class="content">
+        <text class="text-black">邮箱</text>
+        <input bindinput="setMail" placeholder="{{mail}}"></input>
+        </view>
+      </view>
+    </view>
+
+    <view class="cu-list menu shadow-lg">
+      <view class="cu-item arrow">
+        <view class="content">
+        <text class="text-black">STEAM ID</text>
+        <input bindinput="setSteamId" placeholder="{{steamId}}"></input>
+        </view>
+      </view>
+    </view>
+
+<view class="cu-bar btn-group margin-top">
+    <button class="cu-btn bg-gradual-blue shadow-blur round lg" bindtap="save">保存</button>
+  </view>
+	</view>

@@ -1,0 +1,38 @@
+@import "/ColorUI/demo/colorui/main.wxss";
+@import "/ColorUI/demo/colorui/icon.wxss";
+@import "/ColorUI/demo/colorui/animation.wxss";
+@import "/ColorUI/demo/colorui/components/cu-custom.wxss";
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userinfo-avatar {
+  width: 100%;
+}
+
+input{
+  float: right;
+  text-align: right;
+}
+
+/* .userinfo-avatar {
+  width: 480rpx;
+  height: 480rpx;
+  margin: 40rpx;
+  border-radius: 50%;
+} */
+
+/* .userinfo-nickname { */
+  /* color: #aaa;
+  font-size: 40rpx; */
+/* } */
+
+.container{
+  padding: 0 0;
+}
+
+.item{
+  float: right;
+}

@@ -1,0 +1,142 @@
+<cu-custom bgColor="bg-gradual-blue">
+    <!-- <view slot="backText">返回</view> -->
+    <view slot="content">主页</view>
+</cu-custom>
+
+
+<view class="page">
+    <view class="page__bd">
+        <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>
+    </view>
+    <swiper class="swiper"
+            indicator-dots="{{true}}"
+            indicator-color="#ffffff80"
+            indicator-active-color="lightgray"
+            circular="{{true}}"
+            autoplay="{{true}}"
+            easing-function="easeInOutCubic">
+        <block wx:for="{{banners}}" wx:key="index">
+            <swiper-item bindtap="handleProductsItemTap">
+                <view class="swiper_item">
+                    <image src="{{item.url}}"></image>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="menu">
+        <view class="padding flex text-center text-grey bg-white">
+
+            <view class="flex flex-sub flex-direction solid-right" bindtap="toEvaluate">
+                <view class="text-xxl margin-bottom-sm">
+                    <text class="cuIcon-evaluate"></text>
+                </view>
+                <view class="text text-orange">库存估价</view>
+            </view>
+
+            <view class="flex flex-sub flex-direction solid-right" bindtap="toWantToBuy">
+                <view class="text-xxl margin-bottom-sm">
+                    <text class="cuIcon-wenzi"></text>
+                </view>
+                <view class="text text-orange">发布求购</view>
+            </view>
+
+            <view class="flex flex-sub flex-direction solid-right" bindtap="toSell">
+                <view class="text-xxl margin-bottom-sm">
+                    <text class="cuIcon-cart"></text>
+                </view>
+                <view class="text text-orange">上架饰品</view>
+            </view>
+
+            <!-- <view class="flex flex-sub flex-direction solid-right" bindtap="toExchange">
+                <view class="text-xxl margin-bottom-sm">
+                    <text class="cuIcon-order"></text>
+                </view>
+                <view class="text text-orange">饰品交换</view>
+            </view> -->
+
+            <!-- <view class="flex flex-sub flex-direction solid-right" bindtap="toGift">
+                <view class="text-xxl margin-bottom-sm">
+                    <text class="cuIcon-present"></text>
+                </view>
+                <view class="text text-orange">免费饰品</view>
+            </view> -->
+
+        </view>
+
+        <!-- <view class="padding flex text-center text-grey bg-white">
+
+            <view class="flex flex-sub flex-direction solid-right" bindtap="toWantToBuy">
+                <view class="text-xxl margin-bottom-sm">
+                    <text class="cuIcon-wenzi"></text>
+                </view>
+                <view class="text text-orange">发布求购</view>
+            </view>
+
+            <view class="flex flex-sub flex-direction solid-right" bindtap="toSell">
+                <view class="text-xxl margin-bottom-sm">
+                    <text class="cuIcon-cart"></text>
+                </view>
+                <view class="text text-orange">上架饰品</view>
+            </view>
+
+            <view class="flex flex-sub flex-direction solid-right" bindtap="toRecovery">
+                <view class="text-xxl margin-bottom-sm">
+                    <text class="cuIcon-sponsor"></text>
+                </view>
+                <view class="text text-orange">饰品回收</view>
+            </view>
+
+        </view> -->
+
+    </view>
+    <swiper class="swiperitem margin-top solid-bottom" autoplay="true" vertical="true" circular="true">
+        <block wx:for="{{Headlines}}" wx:key="index">
+            <swiper-item  bindtap="linesclick">
+                <view class="cu-bar bg-white">
+                    <view class='action'>
+                        <text class='cuIcon-activity text-green'></text>
+                        <text>头条：{{item.title}}</text>
+                    </view>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class='home' style=" top:{{top*2}}rpx;" catchtouchmove="setTouchMove">
+
+        <view class='homeCon bg-color acea-row row-column-between {{homeActive===true?"on":""}}'>
+            <navigator hover-class='none' url='/pages/home/home' open-type='switchTab'
+                       class='cuIcon-home'></navigator>
+            <navigator hover-class='none' url='/pages/cart/cart' open-type='switchTab'
+                       class='cuIcon-news'></navigator>
+            <navigator hover-class='none' url='/pages/profile/profile' open-type='switchTab'
+                       class='cuIcon-my'></navigator>
+        </view>
+        <view class='pictrue' bindtap='open'>
+            <image src='{{homeActive===false?"/images/close.gif":"/images/open.gif"}}'></image>
+        </view>
+    </view>
+
+    <view class="home-main">
+        <!--热门饰品-->
+        <view class="home-main-products">
+            <view class="home-main-header">一一一热门饰品一一一</view>
+            <view class="products-box">
+                <block wx:for="{{products}}" wx:key="index">
+                    <van-card
+                            price="{{item.price}}"
+                            desc="{{item.detail}}"
+                            title="{{item.title}}"
+                            thumb="{{item.img_url}}"
+                            tag="{{item.tag}}"
+                            thumb-mode="aspectFill"
+                            bindtap="toPurchase"
+                            data-item="{{item}}"
+                    />
+                </block>
+            </view>
+            <!-- <template is="products" data="{{products}}"></template> -->
+        </view>
+    </view>
+</view>

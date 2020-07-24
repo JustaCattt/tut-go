@@ -1,0 +1,64 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/market/market",
+    "pages/explore/explore",
+    "pages/profile/profile",
+    "pages/personal/personal",
+    "pages/evaluate/evaluate",
+    "pages/myshop/myshop",
+    "pages/setting/setting",
+    "pages/favor/favor",
+    "pages/wantToBuy/wantToBuy",
+    "pages/sell/sell",
+    "pages/setShopInfo/setShopInfo",
+    "pages/selling/selling",
+    "pages/purchase/purchase",
+    "pages/cart/cart",
+    "pages/template/products/products",
+    "pages/wantInfo/wantInfo",
+    "pages/shopInfo/shopInfo"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/ColorUI/demo/colorui/components/cu-custom"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "主页",
+        "iconPath": "./images/tabbar4/home.png",
+        "selectedIconPath": "./images/tabbar4/home@selected.png"
+      },
+      {
+        "pagePath": "pages/explore/explore",
+        "text": "资讯",
+        "iconPath": "./images/tabbar4/find.png",
+        "selectedIconPath": "./images/tabbar4/find@selected.png"
+      },
+      {
+        "pagePath": "pages/market/market",
+        "text": "饰品市场",
+        "iconPath": "./images/tabbar4/category.png",
+        "selectedIconPath": "./images/tabbar4/category@selected.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "./images/tabbar4/new.png",
+        "selectedIconPath": "./images/tabbar4/new@selected.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我",
+        "iconPath": "./images/tabbar4/my.png",
+        "selectedIconPath": "./images/tabbar4/my@selected.png"
+      }
+    ]
+  }
+}

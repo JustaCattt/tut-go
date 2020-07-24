@@ -1,0 +1,6 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<!-- <view slot="backText">返回</view> -->
+	<view slot="content">我出售的饰品</view>
+</cu-custom>
+
+<products></products>

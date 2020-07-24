@@ -1,0 +1,36 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<!-- <view slot="backText">返回</view> -->
+	<view slot="content">店铺信息</view>
+</cu-custom>
+
+<view class="cu-list menu shadow-lg margin-top-xl">
+      <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-black">店铺名</text>
+          <text class="item text-grey"> {{shopInfo[0].name}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="cu-list menu shadow-lg margin-top-xl">
+      <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-black">手机号码</text>
+          <text class="item text-grey"> {{shopInfo[0].phone}}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="cu-list menu shadow-lg margin-top-xl">
+      <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-black">STEAM ID</text>
+          <text class="item text-grey"> {{shopInfo[0].steamId}}</text>
+        </view>
+      </view>
+    </view>
+
+    	<!-- !!!!! placeholder 在ios表现有偏移 建议使用 第一种样式 -->
+	<view class="cu-form-group margin-top">
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput">{{shopInfo[0].describe}}</textarea>
+	</view>

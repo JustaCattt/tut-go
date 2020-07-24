@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-picker": "../dist/picker/index",
+    "van-popup": "../dist/popup/index",
+    "van-cell": "../dist/cell/index"
+  }
+}

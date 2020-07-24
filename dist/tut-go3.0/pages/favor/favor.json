@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "products": "../template/products/products"
+  },
+  "navigationBarTitleText": "收藏夹"
+}

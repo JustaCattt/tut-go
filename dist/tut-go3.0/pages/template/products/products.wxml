@@ -1,0 +1,24 @@
+  <!--list-->  
+  <view class="list">  
+    <!--item-->  
+    <block wx:for="{{list}}">  
+      <view class="goods">  
+        <!--左侧图-->  
+        <view>  
+          <image src="{{item.imgUrl}}" class="good-img" />  
+        </view>  
+        <!--右侧-->  
+        <view class="good-cont">  
+          <!--文字-->  
+          <view class="goods-navigator">  
+            <text class="good-name">{{item.name}}</text>  
+          </view>  
+          <!--价格-->  
+          <view class="good-price">  
+            <text>￥{{item.price}}</text>  
+            <image id="{{item.id}}" class="cart" src="/images/delete.png" bindtap="deletes" data-index="{{index}}" />  
+          </view>  
+        </view>  
+      </view>  
+    </block>  
+  </view>  

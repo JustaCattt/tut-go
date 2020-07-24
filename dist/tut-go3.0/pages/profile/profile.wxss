@@ -1,0 +1,31 @@
+@import "/ColorUI/demo/colorui/main.wxss";
+@import "/ColorUI/demo/colorui/icon.wxss";
+@import "/ColorUI/demo/colorui/animation.wxss";
+@import "/ColorUI/demo/colorui/components/cu-custom.wxss";
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 50rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+  font-size: 40rpx;
+}
+
+#balance{
+  /* display: inline; */
+  float: right;
+}
+
+.container{
+  padding: 0 0;
+}

@@ -1,0 +1,5 @@
+@import "/ColorUI/demo/colorui/main.wxss";
+@import "/ColorUI/demo/colorui/icon.wxss";
+@import "/ColorUI/demo/colorui/animation.wxss";
+@import "/ColorUI/demo/colorui/components/cu-custom.wxss";
+

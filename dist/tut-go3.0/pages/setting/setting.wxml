@@ -1,0 +1,24 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<!-- <view slot="backText">返回</view> -->
+	<view slot="content">设置</view>
+</cu-custom>
+
+
+<view class="cu-list menu shadow-lg margin-top-xl">
+      <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-black">帐号管理</text>
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+          <!-- <text class="text-grey" id="userName"> {{userInfo.nickName}}</text> -->
+        </view>
+      </view>
+    </view>
+
+    <view class="cu-list menu shadow-lg margin-top-xl">
+      <view class="cu-item arrow">
+        <view class="content">
+          <text class="text-black">手机号码</text>
+          <text class="text-grey" id="userPhone"> {{userPhone}}</text>
+        </view>
+      </view>
+    </view>

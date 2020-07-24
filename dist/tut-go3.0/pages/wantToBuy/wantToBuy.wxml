@@ -1,0 +1,49 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<!-- <view slot="backText">返回</view> -->
+	<view slot="content">发布求购</view>
+</cu-custom>
+
+
+<form>
+	<view class="cu-form-group margin-top">
+		<view class="title">饰品名称:</view>
+		<input bindinput="setName"></input>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">饰品类别:</view>
+		<picker bindchange="PickerChange" value="{{index}}" range="{{picker}}">
+			<view class="picker text-grey">
+				{{index?picker[index]:picker[index]}}
+			</view>
+		</picker>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">磨损程度:</view>
+		<picker bindchange="PickerChange1" value="{{index1}}" range="{{picker1}}">
+			<view class="picker text-grey">
+				{{index1?picker1[index1]:picker1[index1]}}
+			</view>
+		</picker>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">期望价格区间:</view>
+		<picker bindchange="PickerChange2" value="{{index2}}" range="{{picker2}}">
+			<view class="picker text-grey">
+				{{index2?picker2[index2]:picker2[index2]}}
+			</view>
+		</picker>
+	</view>
+
+	<!-- !!!!! placeholder 在ios表现有偏移 建议使用 第一种样式 -->
+	<view class="cu-form-group margin-top">
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="求购信息描述"></textarea>
+	</view>
+
+  <view class="cu-bar btn-group margin-top">
+    <button class="cu-btn bg-gradual-blue shadow-blur round lg" bindtap="save">确认发布</button>
+  </view>
+</form>
+

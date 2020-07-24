@@ -1,0 +1,15 @@
+/**app.wxss**/
+@import "/ColorUI/demo/colorui/main.wxss";
+@import "/ColorUI/demo/colorui/icon.wxss";
+@import "/ColorUI/demo/colorui/animation.wxss";
+@import "/ColorUI/demo/colorui/components/cu-custom.wxss";
+@import "/ColorUI/demo/pages/plugin/verticalnav/verticalnav.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; 
+  justify-content: space-between;
+  padding: 200rpx 0; */
+  box-sizing: border-box;
+} 

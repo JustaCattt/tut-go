@@ -1,0 +1,55 @@
+@import "/ColorUI/demo/colorui/main.wxss";
+@import "/ColorUI/demo/colorui/icon.wxss";
+@import "/ColorUI/demo/colorui/animation.wxss";
+@import "/ColorUI/demo/colorui/components/cu-custom.wxss";
+
+/* pages/index/index.wxss */
+page{  
+  height: 100%;  
+}  
+.container{  
+  background: #f5f5f5;  
+}  
+
+.goods{  
+  display: flex;  
+  flex-direction: row;  
+  border-bottom: 1px solid #ddd;  
+}  
+.good-img{  
+  padding: 5px;  
+  width: 80px;  
+  height: 80px;  
+}  
+.good-cont{  
+  display: flex;  
+  flex: 1;  
+  flex-direction: column;  
+  font-size: 15px;  
+}  
+.goods-navigator{  
+  display: flex;  
+  flex: 1;  
+  flex-direction: column;  
+  justify-content: center;  
+}  
+.good-name{  
+  display: flex;  
+  flex: 1;  
+  flex-direction: column;  
+  color: #555;  
+  justify-content: center;  
+}  
+.good-price{  
+  display: flex;  
+  flex: 1;  
+  flex-direction: row;  
+  justify-content: space-between;  
+  color:#e4393c;  
+  font-weight: 600;  
+}
+.cart{  
+  width: 40px;  
+  height: 40px;  
+  padding-right: 10px;  
+}  

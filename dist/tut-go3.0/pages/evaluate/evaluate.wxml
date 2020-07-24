@@ -1,0 +1,16 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<!-- <view slot="backText">返回</view> -->
+	<view slot="content">库存估价</view>
+</cu-custom>
+
+<form>
+
+<view class="cu-form-group margin-top">
+		<view class="title">Steam ID:</view>
+		<input placeholder="请输入Steam ID" bindinput="setEval"></input>
+	</view>
+
+	<view class="cu-bar btn-group margin-top">
+    <button class="cu-btn bg-gradual-blue shadow-blur round lg" bindtap="sumbit">确认</button>
+  </view>
+</form>

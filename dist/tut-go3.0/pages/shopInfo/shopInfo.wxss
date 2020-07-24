@@ -1,0 +1,17 @@
+@import "/ColorUI/demo/colorui/main.wxss";
+@import "/ColorUI/demo/colorui/icon.wxss";
+@import "/ColorUI/demo/colorui/animation.wxss";
+@import "/ColorUI/demo/colorui/components/cu-custom.wxss";
+
+input{
+  float: right;
+  text-align: right;
+}
+
+.container{
+  padding: 0 0;
+}
+
+.item{
+  float: right;
+}

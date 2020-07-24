@@ -1,0 +1,19 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+	<!-- <view slot="backText">返回</view> -->
+	<view slot="content">收藏夹</view>
+</cu-custom>
+
+<products></products>
+
+<!-- <view class="page">
+	<view class="goods cu-card case">
+		<view class="cu-item shadow">
+			<view class="image">
+				<image mode="widthFix" src="../../images/goods/1.png" style="height=150.865px;"></image>
+				<image src="../../images/goods/2.png"></image>
+			</view>
+		</view>
+		
+	</view>
+</view> -->
+

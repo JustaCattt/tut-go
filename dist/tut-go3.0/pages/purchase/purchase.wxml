@@ -1,0 +1,105 @@
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+    <!-- <view slot="backText">返回</view> -->
+    <view slot="content">购买页面</view>
+</cu-custom>
+        <!-- <view class="tower-swiper" bindtouchmove="towerMove" bindtouchstart="towerStart" bindtouchend="towerEnd">
+            <view class="tower-item {{item.zIndex===1?'none':''}}" wx:for="{{swiperList}}" wx:key="index"
+                  style="--index:{{item.zIndex}};--left:{{item.mLeft}}">
+                <view class="swiper-item">
+                    <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type==='image'}}"></image>
+                    <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}"
+                           objectFit="cover" wx:if="{{item.type==='video'}}"></video>
+                </view>
+            </view>
+        </view> -->
+
+        <!--111-->
+<swiper class="screen-swiper {{DotStyle?'square-dot':'round-dot'}}" indicator-dots="true" circular="true"
+        autoplay="true" interval="5000" duration="500">
+    <swiper-item>
+        <image src="{{detailData.img_url}}" mode="aspectFill"></image>
+        <!--        <video src="{{detailData.img_url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover"-->
+        <!--               wx:if="{{detailData.img_url.type==='video'}}"></video>-->
+    </swiper-item>
+</swiper>
+
+
+<view class='wrapper'>
+    <view class='share acea-row row-between row-bottom'>
+        <view class='money font-color'>
+            ￥
+            <text class='num'>{{storeInfo.price}}</text>
+        </view>
+        <view class='cuIcon-share' bindtap='listenerActionSheet'></view>
+    </view>
+    <view class='introduce'>{{storeInfo.store_name}}</view>
+    <view class='label acea-row row-between-wrapper'>
+        <view>原价:￥{{storeInfo.ot_price}}</view>
+        <view>库存:{{storeInfo.stock}}{{storeInfo.unit_name}}</view>
+        <view>销量:{{storeInfo.fsales}}{{storeInfo.unit_name}}</view>
+    </view>
+    <view class='coupon acea-row row-between-wrapper' bindtap='coupon'
+          style="{{ storeInfo.give_integral > 0 ? 'margin-top:0;':''}}">
+        <view class='hide line1 acea-row'>
+            优惠券：
+            <view class='activity'>满20减3</view>
+        </view>
+        <view class='cuIcon-attention'></view>
+    </view>
+</view>
+<view class='home' style=" top:{{top*2}}rpx;" catchtouchmove="setTouchMove">
+
+    <view class='homeCon bg-color acea-row row-column-between {{homeActive===true?"on":""}}'>
+        <navigator hover-class='none' url='/pages/home/home' open-type='switchTab'
+                   class='cuIcon-home'></navigator>
+        <navigator hover-class='none' url='/pages/cart/cart' open-type='switchTab'
+                   class='cuIcon-news'></navigator>
+        <navigator hover-class='none' url='/pages/profile/profile' open-type='switchTab'
+                   class='cuIcon-my'></navigator>
+    </view>
+    <view class='pictrue' bindtap='open'>
+        <image src='{{homeActive===false?"/images/close.gif":"/images/open.gif"}}'></image>
+    </view>
+</view>
+<van-cell title="{{current}}" is-link bind:click="showPopup"/>
+<van-popup show="{{ show }}" bind:close="onClose" position="bottom">
+   <van-picker columns="{{ columns }}"
+               bind:change="onChange"
+               show-toolbar
+               title="请选择"
+               bind:confirm="confirm"/>
+</van-popup>
+        <!--111-->
+<view class="bg-white flex-sub radius shadow-lg">
+    <image src="http://cdn.mockplus.cn/image/2018/03/62f3d715-49a1-4b69-a549-ff17c6d732d0.gif" mode="widthFix"
+           class="gif-white response"
+           style="height:480rpx"></image>
+</view>
+
+<view class="cu-bar bg-white tabbar border shop" id="purchase">
+    <button class="action" open-type="contact">
+        <view class="cuIcon-service text-green">
+            <view class="cu-tag badge"></view>
+        </view>
+        客服
+    </button>
+
+    <view class="action text-orange" style="display:{{collect}};" bindtap="hasCollect">
+        <view class="cuIcon-favorfill"></view>
+        已收藏
+    </view>
+
+    <view class="action" style="display:{{cancelCollect}};" bindtap="isCollect">
+        <view class="cuIcon-favor"></view>
+        收藏
+    </view>
+
+
+    <view class="action" bindtap="jump">
+        <view class="cuIcon-cart">
+            <view class="cu-tag badge">99</view>
+        </view>
+        购物车
+    </view>
+    <view class="bg-gradual-blue submit" bindtap="sumbit">立即订购</view>
+</view>
