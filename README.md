@@ -1,2 +1,2 @@
 # tut-go
-a wechat mini program
+使用原生微信开发者工具开发的CSGO饰品交易小程序，仅页面，假数据，学习用。
